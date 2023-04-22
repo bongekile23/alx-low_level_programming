@@ -1,16 +1,26 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+#include <time.h>
+#include <stdlib.h>
+/**
+ * main - Determine if arandom number is positive,negetive or zero
+ * Return: 0 on success
+ */
 int main(void)
 {
 	int n;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
+	if (n > 0)
+	{
+		printf("%d is %s\n", n, "negetive");
+	}
+	else if (n < 0)
+	{
+		printf("%d is %s\n", n, "positive");
+	}
+	else
+	{
+		printf("%d is %s\n", n, "zero");
+	}
 	return (0);
 }
-
