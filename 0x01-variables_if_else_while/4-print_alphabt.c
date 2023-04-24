@@ -1,24 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <string.h>
 
 /**
- * main - print alphabet except q and e
- * Return: always 0 (success)
+ * main - Prints the alphabet without q and e.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n = 97;
+	int i;
 
-	while (n <= 122)
+	for (i = 97; i < 123; i++)
 	{
-		if (n == 101 || n == 113)
+		if (i != 101 && i != 113)
 		{
-			n++;
-			continue;
+			putchar(i);
 		}
-		putchar('n');
-		n++;
 	}
 	putchar('\n');
 	return (0);
