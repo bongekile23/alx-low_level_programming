@@ -10,23 +10,11 @@ int is_prime_number(int n);
  * Return: if the number is divisible -0
  * lf the number is not divisible -1
  */
-int is_divisible(int num, int div)
+int is_prime_number(int n)
 {
 	if (num % div == 0)
 		return (0);
 	if (div == num / 2)
 		return (1);
 	return (is_divisible(num, div + 1));
-}
-/**
- * is-prime_number - says if the integer is a prime number or not
- * @n: number to evaluate
- * Return: 1 if  n is a prime number, 0 if not
- */
-int is_prime_number(int n)
-{
-	if (n <= 1)
-		return (0);
-
-	return (is_prime_number(n, n - 1));
 }
